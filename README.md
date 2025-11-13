@@ -1,0 +1,1 @@
+Experimental quantitative && qualitative results related to the paper "A Geometry-Informed Neural Network for Enhancing CYGNSS Soil Moisture Data Interpolation" submitted for publication to Submitted to IEEE Transaction on Geoscience and Remote Sensing journal - 2025
