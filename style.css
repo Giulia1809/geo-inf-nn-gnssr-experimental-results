@@ -1,12 +1,91 @@
-body {
-  max-width: 850px;
-  margin: auto;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+:root {
+  --primary: #4B2E83;      /* Synaesthetic Violet */
+  --bg: #0E0E11;           /* Near-black, not pure */
+  --bg-soft: #15151B;      /* Section contrast */
+  --text: #E6E6EB;         /* Soft white */
+  --muted: #9CA3AF;        /* Captions, secondary */
+  --border: #2A2A35;
 }
 
-.gallery img {
-  max-width: 100%;
-  margin-bottom: 15px;
-  display: block;
+body {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
 }
+
+/* Headings */
+h1, h2, h3 {
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 0.3em;
+}
+
+h2 {
+  margin-top: 2.2em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+}
+
+/* Links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  background: var(--bg-soft);
+  padding: 24px 28px;
+  margin: 36px 0;
+  border-left: 4px solid var(--primary);
+}
+
+/* Figures */
+figure {
+  margin: 32px 0;
+}
+
+img {
+  max-width: 100%;
+  border: 1px solid var(--border);
+  padding: 6px;
+  background: #000;
+}
+
+figcaption {
+  color: var(--muted);
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+/* Lists */
+ul {
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* Footer */
+footer {
+  margin-top: 80px;
+  font-size: 0.9em;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+

@@ -2,33 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Your Paper Title – Supplementary Material</title>
+  <title>Experiments – Geometry-Informed Neural Interpolation for GNSS-R</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>A Geometry-Informed Neural Architecture Interpolation Method for GNSS-R Data</h1>
-<h3>Supplementary Materials</h3>
+<h1>Experimental Results</h1>
 
-<p>This website hosts extended figures, videos, and results for the paper:<br>
-<b>A Geometry-Informed Neural Architecture \\ Interpolation Method for GNSS-R Data</b><br>
-Authors: Giulia Ciabatti, Vincenzo Suriani, Domenico Daniele Bloisi, Isabella Mereu, Davide Comite </p>
+<p>
+Supplementary experimental material for the paper:<br>
+<b>A Geometry-Informed Neural Architecture Interpolation Method for GNSS-R Data</b><br>
+Giulia Ciabatti, Vincenzo Suriani, Domenico Daniele Bloisi, Isabella Mereu, Davide Comite
+</p>
 
-<h2>Figures</h2>
-<div class="gallery">
-  <img src="figures/figure1.png" alt="figure 1">
-  <img src="figures/figure2.png" alt="figure 2">
-</div>
+<section>
+<h2>Experimental Setup</h2>
+<p>
+This section reports experimental details and analyses omitted from the main manuscript
+due to page constraints. All experiments are designed to assess the contribution of
+geometry-informed components—namely spectral graph embeddings and spatial regularization—
+to GNSS-R data interpolation performance.
+</p>
 
-<h2>Results</h2>
 <ul>
-  <li><a href="results/model_outputs.html">Model Outputs</a></li>
-  <li><a href="results/ablations.html">Ablation Studies</a></li>
+  <li>Dataset: CYGNSS GNSS-R observations</li>
+  <li>Training / validation split consistent with main paper</li>
+  <li>Evaluation metrics identical to those reported in Section IV</li>
+</ul>
+</section>
+
+<section>
+<h2>Qualitative Results</h2>
+
+<figure>
+  <img src="figures/qualitative_global.png" alt="Qualitative global interpolation">
+  <figcaption>
+  Figure S1 — Global interpolation results comparing geometry-informed predictions
+  with grid-based baselines. Spatial coherence and boundary consistency are visibly improved.
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="figures/qualitative_local.png" alt="Qualitative local interpolation">
+  <figcaption>
+  Figure S2 — Local zoomed-in regions highlighting edge preservation and reduced striping
+  artifacts enabled by spectral positional encodings.
+  </figcaption>
+</figure>
+
+</section>
+
+<section>
+<h2>Quantitative Evaluation</h2>
+
+<p>
+Additional quantitative results are reported below, extending Table II of the main paper.
+These include region-wise metrics and sensitivity to spectral dimensionality.
+</p>
+
+<ul>
+  <li><a href="results/metrics_extended.html">Extended Metrics Tables</a></li>
+  <li><a href="results/region_analysis.html">Region-wise Performance Analysis</a></li>
 </ul>
 
-<h2>Code & Data</h2>
-<p><a href="https://github.com/<your-username>/<your-repo>">GitHub Repository</a></p>
+</section>
+
+<section>
+<h2>Ablation Studies</h2>
+
+<p>
+We conduct controlled ablation experiments to isolate the effect of each architectural
+component. In particular, we analyze the removal of:
+</p>
+
+<ul>
+  <li>Graph-based spectral positional encodings</li>
+  <li>Geometry-aware regularization terms</li>
+  <li>Edge-aware sharpening mechanisms</li>
+</ul>
+
+<p>
+Detailed results and visual comparisons are provided in the following pages:
+</p>
+
+<ul>
+  <li><a href="results/ablations.html">Full Ablation Study</a></li>
+  <li><a href="results/sensitivity_spectral_dim.html">Sensitivity to Spectral Dimension</a></li>
+</ul>
+
+</section>
+
+<section>
+<h2>Reproducibility</h2>
+
+<p>
+All experiments were conducted using fixed random seeds and deterministic training
+procedures. Code, configuration files, and preprocessed data splits are available at:
+</p>
+
+<p>
+<a href="https://github.com/&lt;your-username&gt;/&lt;your-repo&gt;">
+https://github.com/&lt;your-username&gt;/&lt;your-repo&gt;
+</a>
+</p>
+
+</section>
+
+<footer>
+<p>
+Part of <b style="color:#4B2E83;">Synaesthesia</b> —  
+geometry-informed intelligence for physical sensing and inference.
+</p>
+</footer>
 
 </body>
 </html>
-
