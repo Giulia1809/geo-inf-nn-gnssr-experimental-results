@@ -1,12 +1,30 @@
+/* =====================================================
+   Synaesthesia — Geometry-Informed Academic Style
+   Light mode (default) + automatic dark mode
+   ===================================================== */
+
+/* ---------- Light Mode (Default) ---------- */
 :root {
   --primary: #4B2E83;      /* Synaesthetic Violet */
-  --bg: #0E0E11;           /* Near-black, not pure */
-  --bg-soft: #15151B;      /* Section contrast */
-  --text: #E6E6EB;         /* Soft white */
-  --muted: #9CA3AF;        /* Captions, secondary */
-  --border: #2A2A35;
+  --bg: #FAFAFC;           /* Soft paper white */
+  --bg-soft: #F1F1F7;      /* Section panels */
+  --text: #1E1E24;         /* Near-black */
+  --muted: #5F6470;        /* Captions, secondary */
+  --border: #D6D6E0;       /* Structural lines */
 }
 
+/* ---------- Dark Mode (Automatic) ---------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0E0E11;         /* Near-black */
+    --bg-soft: #15151B;    /* Section contrast */
+    --text: #E6E6EB;       /* Soft white */
+    --muted: #9CA3AF;      /* Secondary text */
+    --border: #2A2A35;     /* Subtle structure */
+  }
+}
+
+/* ---------- Base Layout ---------- */
 body {
   max-width: 900px;
   margin: auto;
@@ -17,7 +35,7 @@ body {
   line-height: 1.7;
 }
 
-/* Headings */
+/* ---------- Headings ---------- */
 h1, h2, h3 {
   color: var(--primary);
   font-weight: 600;
@@ -35,7 +53,7 @@ h2 {
   padding-bottom: 6px;
 }
 
-/* Links */
+/* ---------- Links ---------- */
 a {
   color: var(--primary);
   text-decoration: none;
@@ -45,7 +63,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Sections */
+/* ---------- Sections ---------- */
 section {
   background: var(--bg-soft);
   padding: 24px 28px;
@@ -53,7 +71,7 @@ section {
   border-left: 4px solid var(--primary);
 }
 
-/* Figures */
+/* ---------- Figures ---------- */
 figure {
   margin: 32px 0;
 }
@@ -62,7 +80,7 @@ img {
   max-width: 100%;
   border: 1px solid var(--border);
   padding: 6px;
-  background: #000;
+  background: transparent;
 }
 
 figcaption {
@@ -71,7 +89,7 @@ figcaption {
   margin-top: 8px;
 }
 
-/* Lists */
+/* ---------- Lists ---------- */
 ul {
   padding-left: 22px;
 }
@@ -80,7 +98,7 @@ li {
   margin-bottom: 6px;
 }
 
-/* Footer */
+/* ---------- Footer ---------- */
 footer {
   margin-top: 80px;
   font-size: 0.9em;
@@ -88,4 +106,3 @@ footer {
   border-top: 1px solid var(--border);
   padding-top: 20px;
 }
-
