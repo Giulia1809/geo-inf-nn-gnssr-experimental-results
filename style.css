@@ -1,0 +1,12 @@
+body {
+  max-width: 850px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.gallery img {
+  max-width: 100%;
+  margin-bottom: 15px;
+  display: block;
+}
